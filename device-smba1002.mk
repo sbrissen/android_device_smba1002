@@ -30,9 +30,6 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 # Inherit from smba_common
 $(call inherit-product, device/malata/smba_common/device-common.mk)
 
-# Install Apps
-$(call inherit-product, device/malata/smba1002/app/drh_apps.mk)
-
 # Inherit from vendor specific if exists
 $(call inherit-product-if-exists, vendor/malata/smba1002/smba1002-vendor-blobs.mk)
 
@@ -44,7 +41,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 	device/malata/smba1002/overlay
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=120 \
+        ro.sf.lcd_density=120 \
 	ro.carrier=wifi-only \
 	ro.opengles.version=131072
 
